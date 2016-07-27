@@ -1,0 +1,302 @@
+/***FONTS*****/
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+/*font-family: 'Poiret One', cursive;*/
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,400italic,600,600italic);
+/* font-family: 'Josefin Sans', sans-serif;*/
+
+@import url(https://fonts.googleapis.com/css?family=Quattrocento:400,700);
+/*font-family: 'Quattrocento', serif;*/
+
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great|Righteous);
+/*font-family: 'Fredericka the Great', cursive;
+font-family: 'Righteous', cursive; */
+
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+/*font-family: 'Slabo 27px', serif;*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Satisfy|Delius|Gochi+Hand|Homemade+Apple|Short+Stack|Delius+Unicase|Princess+Sofia|Jim+Nightshade|Bonbon);
+
+/*
+font-family: 'Gloria Hallelujah', cursive;
+
+font-family: 'Satisfy', cursive;
+
+font-family: 'Delius', cursive;
+
+font-family: 'Gochi Hand', cursive;
+
+font-family: 'Homemade Apple', cursive;
+
+font-family: 'Short Stack', cursive;
+
+font-family: 'Delius Unicase', cursive;
+
+font-family: 'Princess Sofia', cursive;
+
+font-family: 'Jim Nightshade', cursive;
+
+font-family: 'Bonbon', cursive;
+*/
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Rock+Salt);/**
+font-family: 'Architects Daughter', cursive;
+
+font-family: 'Gloria Hallelujah', cursive;
+
+font-family: 'Rock Salt', cursive;
+*/
+
+
+/*PREVENTING FUOC*/
+.no-js .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}
+
+/******************************************************************/
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #000;
+    box-sizing:border-box;
+    background-color: black
+
+}
+/*
+.container {
+    position: relative;
+	height: 100%;
+    width: 100%;
+    background-color: black;
+}
+*/
+
+/***--------------------------------------------------------------***/
+/*------- TITLE/HOME PAGE -------------*/
+video.video-bg {
+    background-size: cover;
+
+    /*to fit in div*/
+/*    min-width: 100%;*/
+    width: auto;
+    height: 100%;
+
+    /*aligning vertically*/
+    position: absolute; /*parent div should be relatively positioned*/
+    top: 50%;
+    transform: translate(0, -50%);
+
+    /*aligning horizontally*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-filter: opacity(1);
+    filter: opacity(1);
+}
+
+/*--------------------------------------------------------*/
+/*** HEADER ***/
+
+#header {
+    width: 100%;
+    height: 50px;
+}
+
+
+/*--------------------------------------------------------*/
+/*** MAIN ***/
+
+main {
+    margin-top: 30px;
+}
+
+/*---------- Title ---------**/
+@font-face {
+  font-family: 'Carton Six';
+  src: url('cartonsix_nc/Carton_Six.ttf');
+}
+
+span.inside {
+    font-family: 'Carton Six';
+    font-size: 1.5em;
+}
+
+span.out {
+    margin-left: 50px;
+    font-family: 'Carton Six';
+    font-size: 1.5em;
+
+}
+/*** Circular Divs ***/
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.circleBase img {
+    width: 100%;
+    height: 100%;
+}
+
+#anger, #disguist, #joy, #sad, #fear {
+    width: 40%;
+    height: 20%;
+    background: black;
+    border: 3px solid;
+    overflow: hidden;
+}
+
+#anger {
+    border:red;
+    margin-left: 25%;
+    margin-top: 0;
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+    -webkit-animation-delay: -1.3s;
+    animation-delay: -1.3s;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+#joy {
+    border:yellow;
+    margin-left: 0;
+    margin-top: 30%;
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+    -webkitanimation-duration: 5s;
+    animation-duration: 5s;
+}
+
+#disguist {
+    border:green;
+    margin-left: 60%;
+    margin-top: 30%;
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkitanimation-duration: 5s;
+    animation-duration: 5s;
+}
+
+#sad {
+    border:blue;
+    margin-left: 45%;
+    margin-top: 10%;
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkitanimation-duration: 4s;
+    animation-duration: 4s;
+}
+
+#fear {
+    border:purple;
+    margin-left: 10%;
+    margin-top: 15%;
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkitanimation-duration: 5s;
+    animation-duration: 5s;
+}
+
+/*
+#anger:hover, #disguist:hover, #joy:hover, #sad:hover, #fear:hover {
+    width: 250px;
+    height: 250px;
+    background: black;
+    border: 3px solid;
+    overflow: hidden;
+    -webkit-animation-name: shake;
+    animation-name: shake;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkitanimation-duration: 1s;
+    animation-duration: 1s;
+}
+*/
+
+@media only screen and (max-width: 500px) {
+    #anger, #sad {
+        width: 40%;
+        height: 20%;
+        margin:  0;
+        padding: 0;
+        display: inline-block;
+}
+    #anger, #joy {
+        margin: 0;
+        padding: 0;
+    }
+
+/***--------------------------------------------------------------***/
+/** MDL ***/
+.demo-layout-transparent {
+    background: center / cover;
+    width: 100%;
+    height: 100%;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+}
+/***--------------------------------------------------------------***/
+/*------- EMOTIONS -------------*/
+
+#emo-nav {
+    background-color: black;
+}
+
+#joy-page, #anger-page, #sad-page, #disguist-page, #fear-page{
+    height: 95%;
+    width: 100%;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+    -webkitanimation-duration: 5s;
+    animation-duration: 5s;
+
+}
+
+#joy-page {
+     background-color: #FCB941;
+}
+#anger-page {
+     background-color: #E01931;
+}
+#sad-page {
+     background-color: blue;
+}
+#disguist-page {
+     background-color: green;
+}
+#fear-page {
+     background-color: mediumpurple;
+}

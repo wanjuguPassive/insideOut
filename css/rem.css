@@ -1,0 +1,262 @@
+/*------ FONTS ------*/
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Poiret+One|Satisfy|Delius|Homemade+Apple);
+
+/*
+
+font-family: 'Indie Flower', cursive;
+
+font-family: 'Poiret One', cursive;
+
+font-family: 'Satisfy', cursive;
+
+font-family: 'Delius', cursive;
+
+font-family: 'Homemade Apple', cursive;
+
+*/
+
+/*---- General Styling ---------*/
+
+html,
+body,
+div,
+h1,
+p,
+a,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    font-family: 'Indie Flower', cursive;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#home-page {
+    height: 100vh;
+    min-height: 800px;
+    width: 100%;
+/*    overflow: hidden;*/
+}
+
+/*____________________________________________________________*/
+/*------- VIDEO BG --------*/
+.videobg {
+    position: fixed;
+    z-index: -10;
+
+    /** FULL SCREENING **/
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+
+
+    filter:brightness(100%);
+    -webkit-filter:brightness(100%);
+    -moz-filter:brightness(30%);
+    -o-filter:brightness(30%);
+    -ms-filter:brightness(30%);
+}
+
+/
+/*-------------------------------------------------------------- */
+/*------- BODY ----------*/
+/*--------------------------------------------------------*/
+/*** HEADER ***/
+
+#header {
+    width: 100%;
+    height: 50px !important;
+    
+}
+
+#iO-menu.top-bar {
+    color: #555 !important;
+    background-color:transparent;
+}
+
+#iO-menu.top-bar ul{
+    color: #555 !important;
+    background-color:transparent;
+}
+
+#iO-menu.top-bar ul:hover{
+    color: #555 !important;
+    background-color: #e6e6e6;
+}
+
+#iO-menu.top-bar li {
+    color: #555 !important;
+   border: #555 solid 1px;
+}
+
+#iO-menu.top-bar li a {
+    color: #555 !important;
+    font-size: 1.1rem;
+    letter-spacing: -.05rem;
+    font-weight: 600;
+    
+}
+
+.ioTitle {
+    color: #555 !important;
+    font-size: 3.5rem;
+    letter-spacing: -.05rem;
+    font-weight: 600;
+}
+
+#iO-menu #emotions {
+    display: flex !important;
+    background-color: transparent;
+}
+
+#iO-menu #emotions>* {
+    width: auto;
+}
+
+#iO-menu #emotions>.arrow {
+    margin-left: 5px;
+}
+
+#iO-menu #emotions>.arrow img {
+    width: 50%;
+}
+
+
+
+/*--------------------------------------------------------*/
+/*---------- Content ---------*/
+.container {
+    height: 100%;
+}
+
+.columns, .column {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#body-content {
+    height: auto;
+    min-height: 500px;
+    width: 60%;
+    min-width: 500px;
+/*    max-width: 700px;;*/
+    position: relative;
+}
+
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {}
+        #body-content {
+            height: auto;
+            min-height: 500px;
+            width: 95%;
+            
+        }
+    
+    /* Medium only */
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        #body-content {
+            height: auto;
+            min-height: 500px;
+            width: 80%;
+            
+        }
+    }
+
+
+/*** Circular Divs ***/
+.s2 {
+    width: 20%;
+    height: 100%
+}
+
+
+#icon-row-1 {
+    position: relative;
+    height: 200px;
+    padding-top: 60px;
+    margin-top: 50px;
+    display: none;
+}
+
+.circleBase {
+    /** Making Circle div responsive **/
+/*    width:50%;*/
+    height: 0;
+    border-radius: 50%;
+
+    background: transparent;
+    border: 3px solid;
+    overflow: hidden;
+}
+
+.circleBase img {
+    float:left;
+    width:100%;
+    padding-top: 0;
+    margin-top:0;
+    line-height:1em;
+    text-align:center;
+    color:white;
+}
+
+.s4 {
+    height: 100%;
+    position: relative;
+}
+
+
+/*ROW 2*/
+#icon-row-2 {
+    position: relative;
+    height: auto;
+    min-height: 250px;
+/*    padding-top: 30px;*/
+    
+    flex-flow: row wrap;
+}
+
+#icon-row-2 .circleBase {
+    width: 200px;
+    height: 200px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    
+}
+
+#icon-row-2 .circleBase img {
+    float:left;
+    width:100%;
+    padding-top: 0;
+    margin-top:0;
+    line-height:1em;
+    text-align:center;
+    color:white;
+}
+
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+        
+}
+
+
+    /* Medium only */
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        #icon-row-2 .circleBase {
+            width: 200px;
+            height: 200px;
+            margin-right: 5%;
+            margin-left: 0%;
+            margin-bottom: 5%;
+        }        
+    }
