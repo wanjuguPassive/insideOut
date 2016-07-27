@@ -42,7 +42,7 @@ body{
 
 #home-page {
     height: 100vh;
-    min-height: 800px;
+    min-height: 700px;
     width: 100%;
 /*    overflow: hidden;*/
 }
@@ -136,7 +136,7 @@ body{
 /*--------------------------------------------------------*/
 /*---------- Content ---------*/
 .container {
-    height: 100%;
+    height: calc(100% - 95px);
 }
 
 .columns, .column {
@@ -151,22 +151,24 @@ body{
     min-width: 500px;
 /*    max-width: 700px;;*/
     position: relative;
+    
+    margin-top: 150px;
 }
 
     /* Small only */
-    @media screen and (max-width: 39.9375em) {}
+    @media screen and (max-width: 39.9375em) {
         #body-content {
             height: auto;
-            min-height: 500px;
-            width: 95%;
-            
+            min-height: 400px;
+            width: 95%;            
         }
+    }
     
     /* Medium only */
     @media screen and (min-width: 40em) and (max-width: 63.9375em) {
         #body-content {
             height: auto;
-            min-height: 500px;
+            min-height: 400px;
             width: 80%;
             
         }
@@ -260,3 +262,75 @@ body{
             margin-bottom: 5%;
         }        
     }
+
+/***** Animations *****/
+/**Animation shorthand is:
+    animation:name duration timing-function delay iteration-count   direction fill-mode play-state
+    Default value:	none 0 ease 0 1 normal none running
+**/
+
+
+#anger {
+    border:red;
+/*    margin-left: 22%;*/
+    margin-top: -30%;
+
+    /*    animation:name duration timing-function delay iteration-count direction fill-mode play-state*/
+
+    -webkit-animation: bounceInUp 5s ease -.5s,
+        pulse 3s ease 5s infinite ;
+    animation:  bounceInUp 5s ease -.5s,
+        pulse 3s ease 5s infinite ;
+}
+
+#joy {
+    border:yellow;
+/*
+    margin-left: 0;
+    margin-top: 0;
+*/
+
+    -webkit-animation: bounceInUp 7s ease 0s,
+        pulse 3s ease 7s infinite ;
+    animation:  bounceInUp 7s ease 0s,
+        pulse 3s ease 7s infinite ;
+}
+
+#disguist {
+    border:green;
+/*
+    margin-left: 50%;
+    margin-top: 0;
+*/
+
+    -webkit-animation: bounceInUp 10s ease 0s,
+        pulse 3s ease 10s infinite ;
+    animation: bounceInUp 10s ease 0s,
+        pulse 3s ease 10s infinite ;
+}
+
+#sad {
+    border:blue;
+/*
+    margin-left: 43%;
+    margin-top: -30%;
+*/
+    -webkit-animation: bounceInUp 13s ease 0s,
+        pulse 3s ease 13s infinite ;
+    animation: bounceInUp 13s ease 0s,
+        pulse 3s ease 13s infinite ;
+}
+
+#fear {
+    border:purple;
+/*
+    margin-left: 3%;
+    margin-top: -30%;
+    
+*/
+   -webkit-animation: bounceInUp 15s ease 0s,
+        pulse 3s ease 15s infinite ;
+
+    animation: bounceInUp 15s ease 0s,
+        pulse 3s ease 15s infinite ;
+}
