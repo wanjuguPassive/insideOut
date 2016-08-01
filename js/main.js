@@ -7,3 +7,5 @@ $(function(){
     .end().appendTo('.fadein');},
     7000);
 });
+
+//$("#emos").show();

@@ -82,6 +82,7 @@ body{
 #iO-menu.top-bar {
     color: #555 !important;
     background-color:transparent;
+    padding: .5rem 2rem;
 }
 
 #iO-menu.top-bar ul{
@@ -91,12 +92,12 @@ body{
 
 #iO-menu.top-bar ul:hover{
     color: #555 !important;
-    background-color: #e6e6e6;
+
 }
 
-#iO-menu.top-bar li {
+#iO-menu.top-bar-right ul li {
     color: #555 !important;
-   border: #555 solid 1px;
+
 }
 
 #iO-menu.top-bar li a {
@@ -107,6 +108,11 @@ body{
     
 }
 
+#iO-menu.top-bar li a:hover {
+
+
+}
+
 .ioTitle {
     color: #555 !important;
     font-size: 3.5rem;
@@ -114,9 +120,62 @@ body{
     font-weight: 600;
 }
 
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+        .ioTitle {
+            width: 100%;
+/*            text-align: center*/
+        }
+    }
+
+    /* Medium only */
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        #iO-menu .top-bar-left {
+/*            width: 100%;*/
+        }
+
+        #iO-menu .top-bar-right ul {
+/*            margin-left: 33%;*/
+        }
+
+
+        .ioTitle {
+/*            text-align: center*/
+        }
+
+    }
+
+#iO-menu {}
+
+#iO-menu .top-bar-right {
+    width: 100%;
+}
+
+
+/* Small only */
+    @media screen and (max-width: 39.9375em) {
+        #iO-menu .top-bar-right ul {
+/*            margin-left: 33%;*/
+        }
+
+        #emos {
+/*            position: absolute;*/
+/*            margin-left: 50%;*/
+        }
+    }
+
 #iO-menu #emotions {
     display: flex !important;
     background-color: transparent;
+    border: 1px #555 solid;
+    width: 165px;
+    height: 40px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#iO-menu #emotions:hover {
+/*    background-color: #e6e6e6;    */
 }
 
 #iO-menu #emotions>* {
@@ -131,7 +190,51 @@ body{
     width: 50%;
 }
 
+#emos {
+    left: auto;
+    right: auto !important;
+    width: 165px !important;
+    min-width: 160px;
+    border: 0px solid;
 
+}
+
+#emos>li {
+    width: 165px !important;
+}
+
+#emos>li:hover {
+/*    background-color:rgba(192,192,192,0.6);*/
+/*    color: #fff;*/
+}
+
+#emos>li a {
+/*    padding: .7rem 1rem;*/
+    width: 165px !important;
+    text-align: center;
+}
+
+#emos>li a:hover {
+/*    background-color:rgba(192,192,192,0.4);*/
+    border: 1px #555 solid;
+}
+
+/*hover stuff*/
+#emos #nav-anger:hover {
+    color: crimson !important;
+}
+#emos #nav-joy:hover {
+    color: yellow !important;
+}
+#emos #nav-disguist:hover {
+    color: green !important;
+}
+#emos #nav-fear:hover {
+    color: rebeccapurple!important;
+}
+#emos #nav-sadness:hover {
+    color: mediumblue!important;
+}
 
 /*--------------------------------------------------------*/
 /*---------- Content ---------*/
@@ -147,11 +250,10 @@ body{
 #body-content {
     height: auto;
     min-height: 500px;
-    width: 60%;
+/*    width: 60%;*/
     min-width: 500px;
 /*    max-width: 700px;;*/
     position: relative;
-    
     margin-top: 150px;
 }
 
@@ -159,8 +261,9 @@ body{
     @media screen and (max-width: 39.9375em) {
         #body-content {
             height: auto;
-            min-height: 400px;
-            width: 95%;            
+            min-height: 300px;
+            min-width: 95%;
+            margin-top: 150px;
         }
     }
     
@@ -170,6 +273,7 @@ body{
             height: auto;
             min-height: 400px;
             width: 80%;
+            margin-top: 10px;
             
         }
     }
@@ -247,13 +351,26 @@ body{
 }
 
     /* Small only */
-    @media screen and (max-width: 39.9375em) {
-        
-}
+    @media screen and (max-width: 35.9375em) {
+        #icon-row-2 {
+            position: relative;
+            height: auto;
+            min-height: 250px;
+            flex-flow: row wrap;
+            margin-top: 300px;
+        }
+    }
 
 
     /* Medium only */
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    @media screen and (min-width: 30em) and (max-width: 63.9375em) {
+        #icon-row-2 {
+            position: relative;
+            height: auto;
+            min-height: 250px;
+            margin-top: 00px;
+        }
+
         #icon-row-2 .circleBase {
             width: 200px;
             height: 200px;
@@ -281,8 +398,12 @@ body{
         pulse 3s ease 5s infinite ;
     animation:  bounceInUp 5s ease -.5s,
         pulse 3s ease 5s infinite ;
+
+
+
 }
 
+#anger:hover {}
 #joy {
     border:yellow;
 /*
@@ -334,3 +455,44 @@ body{
     animation: bounceInUp 15s ease 0s,
         pulse 3s ease 15s infinite ;
 }
+
+#anger:hover, #joy:hover, #disguist:hover, #fear:hover, #sad:hover {
+/*
+    -webkit-animation-name: shake;
+    animation-name: shake;
+*/
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Small only */
+    @media screen and (max-width: 39.9375em) {
+        #anger {
+            margin-top: 0%;
+        }
+
+/*
+        #disguist {
+            margin-top: 10%;
+        }
+
+        #sad {
+            margin-top: -60%;
+        }
+
+        #joy {
+            margin-top: 10%;
+        }
+*/
+    }
+
+    /* Medium only */
+    @media screen and (min-width: 40em) and (max-width: 53.9375em) {
+        #anger {
+        margin-top: 0%;
+        }
+    }
