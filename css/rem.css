@@ -1,19 +1,9 @@
-/*------ FONTS ------*/
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Poiret+One|Satisfy|Delius|Homemade+Apple);
-
-/*
-
-font-family: 'Indie Flower', cursive;
-
-font-family: 'Poiret One', cursive;
-
-font-family: 'Satisfy', cursive;
-
-font-family: 'Delius', cursive;
-
-font-family: 'Homemade Apple', cursive;
-
-*/
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
 
 /*---- General Styling ---------*/
 
@@ -42,7 +32,7 @@ body{
 
 #home-page {
     height: 100vh;
-    min-height: 700px;
+    min-height: 600px;
     width: 100%;
 /*    overflow: hidden;*/
 }
@@ -52,6 +42,8 @@ body{
 .videobg {
     position: fixed;
     z-index: -10;
+    background-color: rgba(0, 0, 0, 0.8);;
+    background-image: url(/assets/videos/paint1.png);
 
     /** FULL SCREENING **/
     min-width: 100%;
@@ -80,28 +72,18 @@ body{
 }
 
 #iO-menu.top-bar {
-    color: #555 !important;
+    color: #efefef !important;
     background-color:transparent;
     padding: .5rem 2rem;
 }
 
 #iO-menu.top-bar ul{
-    color: #555 !important;
+    color: #efefef!important;
     background-color:transparent;
 }
 
-#iO-menu.top-bar ul:hover{
-    color: #555 !important;
-
-}
-
-#iO-menu.top-bar-right ul li {
-    color: #555 !important;
-
-}
-
 #iO-menu.top-bar li a {
-    color: #555 !important;
+    color: #efefef !important;
     font-size: 1.1rem;
     letter-spacing: -.05rem;
     font-weight: 600;
@@ -114,7 +96,7 @@ body{
 }
 
 .ioTitle {
-    color: #555 !important;
+    color: #efefef !important;
     font-size: 3.5rem;
     letter-spacing: -.05rem;
     font-weight: 600;
@@ -239,7 +221,7 @@ body{
 /*--------------------------------------------------------*/
 /*---------- Content ---------*/
 .container {
-    height: calc(100% - 95px);
+    height: calc(100% - 135px);
 }
 
 .columns, .column {
@@ -254,7 +236,7 @@ body{
     min-width: 500px;
 /*    max-width: 700px;;*/
     position: relative;
-    margin-top: 150px;
+    margin-top: 70px;
 }
 
     /* Small only */
@@ -279,46 +261,6 @@ body{
     }
 
 
-/*** Circular Divs ***/
-.s2 {
-    width: 20%;
-    height: 100%
-}
-
-
-#icon-row-1 {
-    position: relative;
-    height: 200px;
-    padding-top: 60px;
-    margin-top: 50px;
-    display: none;
-}
-
-.circleBase {
-    /** Making Circle div responsive **/
-/*    width:50%;*/
-    height: 0;
-    border-radius: 50%;
-
-    background: transparent;
-    border: 3px solid;
-    overflow: hidden;
-}
-
-.circleBase img {
-    float:left;
-    width:100%;
-    padding-top: 0;
-    margin-top:0;
-    line-height:1em;
-    text-align:center;
-    color:white;
-}
-
-.s4 {
-    height: 100%;
-    position: relative;
-}
 
 
 /*ROW 2*/
@@ -332,8 +274,13 @@ body{
 }
 
 #icon-row-2 .circleBase {
-    width: 200px;
-    height: 200px;
+    border-radius: 50%;
+    background: transparent;
+/*    border: 3px solid;*/
+    overflow: hidden;
+
+    width: 180px;
+    height: 180px;
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 5%;
@@ -372,8 +319,6 @@ body{
         }
 
         #icon-row-2 .circleBase {
-            width: 200px;
-            height: 200px;
             margin-right: 5%;
             margin-left: 0%;
             margin-bottom: 5%;
@@ -385,6 +330,130 @@ body{
     animation:name duration timing-function delay iteration-count   direction fill-mode play-state
     Default value:	none 0 ease 0 1 normal none running
 **/
+
+/*bounceInUp*/
+@-webkit-keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+/*pulse*/
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 #anger {
@@ -405,7 +474,7 @@ body{
 
 #anger:hover {}
 #joy {
-    border:yellow;
+/*    border:yellow 3px solid;*/
 /*
     margin-left: 0;
     margin-top: 0;
@@ -496,3 +565,107 @@ body{
         margin-top: 0%;
         }
     }
+
+/******-----------------------------------------*********/
+/*BUBBLE*/
+/***Creating a Circular buble div ***/
+
+/******-----------------------------------------*********/
+/* for large and medium screens */
+/*** Responsive size ***/
+.bubble {
+   width:50%; /* Our bubble will be 200px wide and 200px tall */
+   height:0;
+/*   margin:47% auto  auto;*/
+   box-shadow:inset 30px 30px 75px rgba(0,0,0,.1), /* this gives us our subtle light gray background gradient */
+              inset 0px 0px 15px rgba(0,0,0,.5), /* this gives us the darker gray border around the whole bubble */
+              inset 0px 0px 55px rgba(255,255,255,.5), /* this gives us the more subtle white gradient all around the edge of the bubble */
+              inset 3px 3px 5px rgba(0,0,0,.5), /* this gives us the slightly darker top left edge */
+              0 0 50px rgba(255,255,255,.75); /* this puts a white glow all around the outside of the bubble to better contrast the edge */
+   border-radius:50%; /* making our border-radius half the width/height ensures a perfectly round circle */
+   background:rgba(255,255,255,.4); /* makes our bubble slightly lighter in color than the background */
+   position:relative; /* allows us to absolutely position the pseudo elements within the bubble */
+}
+
+.bubble:before { /* adds the white highlight on the top left of the bubble */
+   content:"";
+   display:block;
+   position:absolute;
+   width:50%;
+   height:50%;
+   top:7%;
+   left:7%;
+   border-radius: 150px 50px;
+   box-shadow:inset 10px 10px 50px rgba(255,255,255,.6);
+}
+
+.bubble:after { /* adds the darker lowlight on the bottom of the bubble */
+   content:"";
+   display:block;
+   position:absolute;
+   width:87%;
+   height:87%;
+   border-radius:100%;
+   left:7%;
+   top:7%;
+   box-shadow:inset 0px -10px 10px rgba(0,0,0,.05);
+}
+
+
+/* for small screens */
+/*** One size **/
+
+@media (max-width: 400px) {
+    .bubble {
+   width: 70px;
+   height:70px;
+    }
+}
+
+@media (min-width: 100px, max-width: 800px) {
+    .bubble {
+   width: 120px;
+   height:120px;
+    }
+}
+
+
+
+/* bubble fixed */
+.bubble-fx {
+       width:200px; /* Our bubble will be 200px wide and 200px tall */
+       height:200px;
+       margin:94px auto 50px auto;
+       box-shadow:inset 30px 30px 75px rgba(0,0,0,.1), /* this gives us our subtle light gray background gradient */
+                  inset 0px 0px 15px rgba(0,0,0,.5), /* this gives us the darker gray border around the whole bubble */
+                  inset 0px 0px 55px rgba(255,255,255,.5), /* this gives us the more subtle white gradient all around the edge of the bubble */
+                  inset 3px 3px 5px rgba(0,0,0,.5), /* this gives us the slightly darker top left edge */
+                  0 0 50px rgba(255,255,255,.75); /* this puts a white glow all around the outside of the bubble to better contrast the edge */
+       border-radius:100px; /* making our border-radius half the width/height ensures a perfectly round circle */
+       background:rgba(255,255,255,.4); /* makes our bubble slightly lighter in color than the background */
+       position:relative; /* allows us to absolutely position the pseudo elements within the bubble */
+    }
+
+.bubble-fx:before { /* adds the white highlight on the top left of the bubble */
+   content:"";
+   display:block;
+   position:absolute;
+   width:100px;
+   height:100px;
+   top:15px;
+   left:15px;
+   border-radius: 150px 50px;
+   box-shadow:inset 10px 10px 50px rgba(255,255,255,.6);
+}
+
+.bubble-fx:after { /* adds the darker lowlight on the bottom of the bubble */
+   content:"";
+   display:block;
+   position:absolute;
+   width:170px;
+   height:170px;
+   border-radius:170px;
+   left:15px;
+   top:15px;
+   box-shadow:inset 0px -10px 10px rgba(0,0,0,.05);
+}
